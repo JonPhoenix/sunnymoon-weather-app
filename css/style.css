@@ -9,6 +9,8 @@
 body {
     font-size: 14px;
     line-height: 1;
+    align-content: center;
+    margin: 40px;
 }
 
 header {
@@ -16,21 +18,31 @@ header {
     font-weight: normal;
     color: #BBDEFB;
     background-color: #0D47A1 ;
+    border-radius: 6px;
     text-align: center;
     padding: 20px;
 }
 
+.container-forecast {
+    width: 100%;
+    padding-top: 20px;
+    clear: both;
+    float: right;
+}
 
 /* Search city */
 #sideNavigation {
     height: 100%; 
-    position: fixed;
+    position: relative;
     left: 0;
     background-color: #BBDEFB;
+    height: 600px;
+    border-radius: 6px;
 }
 
 h1 {
     font-size: 20px;
+    color: #0D47A1;
     text-align: left;
     padding: 20px 0px 10px 5px;
 }
