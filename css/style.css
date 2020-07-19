@@ -36,8 +36,10 @@ header {
     position: relative;
     left: 0;
     background-color: #BBDEFB;
-    height: 600px;
+    height: auto;
+    min-height: 150px;
     border-radius: 6px;
+    padding-bottom: 50px;
 }
 
 h1 {
