@@ -22,6 +22,26 @@ header {
 
 
 /* Search city */
+#sideNavigation {
+    height: 100%; 
+    position: fixed;
+    left: 0;
+    background-color: #BBDEFB;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: left;
+    padding: 20px 0px 10px 5px;
+}
+
+#basic-text {
+    background-color: #0D47A1;
+}
+
+.fa {
+    color: white;
+}
 
 /* 1-day forecast */
 
