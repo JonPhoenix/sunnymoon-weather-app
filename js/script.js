@@ -52,16 +52,16 @@ $(document).ready(function() {
             // Current day variable
             let currentDate = moment().format('M/DD/YYYY');
 
-            // Appending daily weather details to HTML
+            // Appending daily weather details to HTML / icons, temperature, humidity, wind speed
             $('#daily-weather').append(
                 "<div class='col s12 m6'>" 
                 + "<h2 class='daily'>" + weatherResponse.name + " (" + currentDate + ")" + "&nbsp" 
                 + "<img src='" + weatherIcons + "'>" + "</h2>"
                 + "<ul class='daily'>" + "Temperature: " + weatherResponse.main.temp + " °F" + "</ul>" 
-                + "<ul class='daily'>" + "Humidity: " + weatherResponse.main.humidity + " %" + "</ul>"
-                
-                
-            )
+                + "<ul class='daily'>" + "Humidity: " + weatherResponse.main.humidity + " %" + "</ul>" 
+                + "<ul class='daily'>" + "Wind Speed: " + weatherResponse.wind.speed + " mph" + "</ul>" 
+                + "</div>"
+            );
 
             console.log(weatherResponse);
 
