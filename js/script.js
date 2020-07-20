@@ -2,14 +2,15 @@
 
 // Function: jQuery / on-click event user - city
 $(document).ready(function() {
+    
     console.log('ready');
 
     // Choosing city / user's input
     $('#icon-button').on('click', function(event) {
         event.preventDefault();
-        // Variable inputs and saves a city
+        // Variable - input and save a city
         let cityInput = $('#input').val();
-        // Variable array to contain input cities
+        // Variable - array for input cities
         let inputCities = [];
 
         // Getting input cities
@@ -38,9 +39,8 @@ $(document).ready(function() {
         // Api open weather / cityInput / units / my api key / currentDay variable
         let currentDay = 'https://api.openweathermap.org/data/2.5/weather?q='
         + cityInput + '&units=imperial' + '&appid=f1a16cad1c18080e4ffd997bda8b2d9d';
-        console.log('currentDay: ', currentDay);
-
-        // Api open weather / coordinates / units / my api key / fiveDays variable
+        
+        console.log('current day: ', currentDay);
 
         // Ajax call - then - function / 1-day forecast
         $.ajax({
@@ -54,6 +54,11 @@ $(document).ready(function() {
             // Current day variable
             let currentDate = moment().format('M/DD/YYYY');
 
+            // Variable - coordinate latitude
+            let coordinateLat = weatherResponse.coord.lat;
+            // Variable - coordinate longitude
+            let coordinateLon = weatherResponse.coord.lon;
+
             // Appending daily weather details to HTML / icons, temperature, humidity, wind speed
             $('#daily-weather').append(
                 "<div class='col s12 m6'>" 
@@ -63,18 +68,23 @@ $(document).ready(function() {
                 + "<ul class='daily'>" + "Humidity: " + weatherResponse.main.humidity + " %" + "</ul>" 
                 + "<ul class='daily'>" + "Wind Speed: " + weatherResponse.wind.speed + " mph" + "</ul>" 
                 + "</div>"
-                + "<div class='col s12 m6'>" 
-                + "<button class='w3-button' id='uvIndex' class='daily'>" + "UV Index: " 
-                + weatherResponse.current.uvi + "</button>"
-                + "</div>"
+                // + "<div class='col s12 m6'>" 
+                // + "<button class='w3-button' id='uvIndex' class='daily'>" + "UV Index: " 
+                // + weatherResponse.current.uvi + "</button>"
+                // + "</div>"
             );
+            
             console.log(weatherResponse);
             
-            // Appending daily weather
+            // Api open weather / lat&lon / units / my api key / fiveDays variable
+            let fiveDays = 'https://api.openweathermap.org/data/2.5/weather?q=' 
+            + 'lat=' + coordinateLat + '&lon=' + coordinateLon + '&units=imperial' 
+            + '&appid=f1a16cad1c18080e4ffd997bda8b2d9d';
+            
+            console.log('five days: ', fiveDays);
 
             // Ajax call block / 5-day forecast
-
-
+            
         })
 
         
