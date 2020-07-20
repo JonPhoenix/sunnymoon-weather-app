@@ -57,6 +57,8 @@ $(document).ready(function() {
                 "<div class='col s12 m6'>" 
                 + "<h2 class='daily'>" + weatherResponse.name + " (" + currentDate + ")" + "&nbsp" 
                 + "<img src='" + weatherIcons + "'>" + "</h2>"
+                + "<ul class='daily'>" + "Temperature: " + weatherResponse.main.temp + " °F" + "</ul>"
+                
                 
             )
 
