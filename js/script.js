@@ -10,22 +10,37 @@ $(document).ready(function() {
     // Choosing city / user's input
     $('#icon-button').on('click', function(event) {
         event.preventDefault();
-        let cityInput = $('#input').val(); // Inputs and saves a city
-        let inputCities = []; // Empty array to contain input cities
+        // Variable inputs and saves a city
+        let cityInput = $('#input').val();
+        // Variable array to contain input cities
+        let inputCities = [];
 
-        inputCities = JSON.parse(localStorage.getItem('inputCities')) || []; // Getting input cities
-        inputCities.push(cityInput); // Pushing input cities to the empty array
-        localStorage.setItem('inputCities', JSON.stringify(inputCities)); // Saving input cities to localStorage
+        // Getting input cities
+        inputCities = JSON.parse(localStorage.getItem('inputCities')) || [];
+        // Pushing input cities to the empty array
+        inputCities.push(cityInput);
+        // Saving input cities to localStorage
+        localStorage.setItem('inputCities', JSON.stringify(inputCities));
 
-        displayWeather(cityInput); // Calling in function
+        // Calling in function
+        displayWeather(cityInput);
     })
 
     // Daily forecast function & API
     function displayWeather(cityInput) {
 
+        // Emptying previous data
+        $('#daily-weather').empty();
+        $('#five-day').empty();
+        $('#day-1').empty();
+        $('#day-2').empty();
+        $('#day-3').empty();
+        $('#day-4').empty();
+        $('#day-5').empty();
+
+        // API weather - current day
     }
 
-    // Empty Data
 
     // if / else if / else / conditionals template
 
