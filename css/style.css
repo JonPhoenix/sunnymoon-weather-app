@@ -27,6 +27,7 @@ header {
     width: 100%;
     clear: both;
     float: right;
+    scroll-padding-right: 0;
     border-radius: 6px;
 }
 
@@ -57,11 +58,14 @@ h1 {
 
 #icon-button {
     background-color: #0D47A1;
+    cursor: pointer;
 }
 
 .fa {
     color: white;
 }
+
+
 
 /* 1-day forecast */
 

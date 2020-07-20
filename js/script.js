@@ -1,7 +1,4 @@
 // SunnyMoon Weather App project script
-// Variables declaration - Dates
-// Current day var
-let currentDate = moment().format('M/DD/YYYY');
 
 // Function: jQuery / on-click event user - city
 $(document).ready(function() {
@@ -43,9 +40,32 @@ $(document).ready(function() {
         + cityInput + '&units=imperial' + '&appid=f1a16cad1c18080e4ffd997bda8b2d9d';
         console.log('currentDay: ', currentDay);
 
-        // Ajax block - 1-day forecast
+        // Ajax call - then - function / 1-day forecast
+        $.ajax({
+            url: currentDay,
+            method: 'GET',
+        }).then(function(weatherResponse) {
+            // Variable for weather icons
+            let weatherIcons = 'http://openweathermap.org/img/wn/' 
+            + weatherResponse.weather[0].icon + '.png';
 
-        // Ajax block - 5-day forecast
+            // Current day variable
+            let currentDate = moment().format('M/DD/YYYY');
+
+            // Appending daily weather details to HTML
+            $('#daily-weather').append(
+                "<div class='col s12 m6'>" 
+                + "<h2 class='daily'>" + weatherResponse.name + " (" + currentDate + ")" + "&nbsp" 
+                + "<img src='" + weatherIcons + "'>" + "</h2>"
+                
+            )
+
+            console.log(weatherResponse);
+
+
+        })
+
+        // Ajax call block / 5-day forecast
 
         // LocalStorage block
 
