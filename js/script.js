@@ -40,13 +40,15 @@ $(document).ready(function() {
         + cityInput + '&units=imperial' + '&appid=f1a16cad1c18080e4ffd997bda8b2d9d';
         console.log('currentDay: ', currentDay);
 
+        // Api open weather / coordinates / units / my api key / fiveDays variable
+
         // Ajax call - then - function / 1-day forecast
         $.ajax({
             url: currentDay,
             method: 'GET',
         }).then(function(weatherResponse) {
             // Variable for weather icons
-            let weatherIcons = 'http://openweathermap.org/img/wn/' 
+            let weatherIcon = 'http://openweathermap.org/img/wn/' 
             + weatherResponse.weather[0].icon + '.png';
 
             // Current day variable
@@ -56,21 +58,28 @@ $(document).ready(function() {
             $('#daily-weather').append(
                 "<div class='col s12 m6'>" 
                 + "<h2 class='daily'>" + weatherResponse.name + " ( " + currentDate + " )" + "&nbsp" 
-                + "<img src='" + weatherIcons + "'>" + "</h2>"
+                + "<img src='" + weatherIcon + "'>" + "</h2>"
                 + "<ul class='daily'>" + "Temperature: " + weatherResponse.main.temp + " °F" + "</ul>" 
                 + "<ul class='daily'>" + "Humidity: " + weatherResponse.main.humidity + " %" + "</ul>" 
                 + "<ul class='daily'>" + "Wind Speed: " + weatherResponse.wind.speed + " mph" + "</ul>" 
                 + "</div>"
+                + "<div class='col s12 m6'>" 
+                + "<button class='w3-button' id='uvIndex' class='daily'>" + "UV Index: " 
+                + weatherResponse.current.uvi + "</button>"
+                + "</div>"
             );
-
             console.log(weatherResponse);
+            
+            // Appending daily weather
+
+            // Ajax call block / 5-day forecast
 
 
         })
 
-        // Ajax call block / 5-day forecast
+        
 
-        // LocalStorage block
+        // LocalStorage block for input cities
 
     }
 
