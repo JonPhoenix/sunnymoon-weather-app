@@ -25,12 +25,16 @@ header {
 
 .container-forecast {
     width: 100%;
-    padding-top: 20px;
     clear: both;
     float: right;
-    background-color: lightgrey;
     border-radius: 6px;
 }
+
+section {
+    overflow: auto;
+    clear: both;
+    width: 100%;
+  }
 
 /* Search city */
 #sideNavigation {
