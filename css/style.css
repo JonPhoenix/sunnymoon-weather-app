@@ -28,6 +28,8 @@ header {
     padding-top: 20px;
     clear: both;
     float: right;
+    background-color: lightgrey;
+    border-radius: 6px;
 }
 
 /* Search city */
