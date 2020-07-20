@@ -38,16 +38,17 @@ $(document).ready(function() {
         $('#day-4').empty();
         $('#day-5').empty();
 
-        // API weather - current day
+        // Api open weather / cityInput / units / my api key / currentDay variable
+        let currentDay = 'https://api.openweathermap.org/data/2.5/weather?q='
+        + cityInput + '&units=imperial' + '&appid=f1a16cad1c18080e4ffd997bda8b2d9d';
+        console.log('currentDay: ', currentDay);
+
+        // Ajax block - 1-day forecast
+
+        // Ajax block - 5-day forecast
+
+        // LocalStorage block
+
     }
-
-
-    // if / else if / else / conditionals template
-
-    // Ajax block - 1-day forecast
-
-    // Ajax block - 5-day forecast
-
-    // LocalStorage block
 
 });
