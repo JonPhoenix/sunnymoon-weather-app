@@ -1,5 +1,4 @@
 // SunnyMoon Weather App project script
-
 // Function: jQuery / on-click event user - city
 $(document).ready(function() {
     
@@ -7,6 +6,7 @@ $(document).ready(function() {
 
     // Choosing city / user's input
     $('#icon-button').on('click', function(event) {
+        // Prevents default action
         event.preventDefault();
         // Variable - input and save  city
         let cityInput = $('#input').val();
@@ -109,7 +109,7 @@ $(document).ready(function() {
                 }
                 else if (weatherResponse.current.uvi > 11) {
                     $('#uvIndex').addClass('extreme');
-                }
+                };
                 
                 console.log(weatherResponse);
                 console.log(weatherResponse.current.uvi);
@@ -219,11 +219,11 @@ $(document).ready(function() {
                     + weatherResponse.daily[0].humidity + " %" + "</div>" 
                     + "</div>"
                 );
-                // Function call
+                // Calling in function
                 // displayCities ();
-            })
-        })
-    }
+            });
+        });
+    };
     
     // Function declaration / LocalStorage for input cities
     function displayCities() {
@@ -244,10 +244,18 @@ $(document).ready(function() {
                 "<div class= 'city-list'>"
                 // Appending every searched city as a call-back button
                 + "<button class='list-item'>" + cityName + "</button>"
-            )
-        }
-    }
-    // Function call
+            );
+        };
+    };
+    // Calling in function
     // displayCities ();
 
+    // On click event to displayCities / function / this
+    $('#searchedCities').on('click', '.list-item', function(event) {
+        // Prevents default action
+        event.preventDefault();
+        // Variable to call back cities
+        let savedCity = ($(this).text());
+        displayWeather(savedCity);
+    });
 });
