@@ -101,27 +101,27 @@ ul {
 }
 
 .low {
-    background-color: palegreen;
+    background-color: #689F38;
     color: white;
 }
 
 .moderate {
-    background-color: orange;
+    background-color: #FFA000;
     color: white;
 }
 
 .high {
-    background-color: orangered;
+    background-color: #E64A19;
     color: white;
 }
 
 .very-high {
-    background-color: red;
+    background-color: #D32F2F;
     color: white;
 }
 
 .extreme {
-    background-color: indigo;
+    background-color: #7B1FA2;
     color: white;
 }
 
