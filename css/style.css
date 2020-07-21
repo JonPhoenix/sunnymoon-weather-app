@@ -126,5 +126,21 @@ ul {
 }
 
 /* 5-day forecast */
+.card-body {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 30px;
+    text-align: center;
+    background-color: #0D47A1;
+    color: #BBDEFB;
+    border: none;
+    border-radius: 6px;
+    width: min-content;
+}
+
+.card-header {
+    font-size: 24px;
+    color: white;
+}
 
 /* Media Queries */
