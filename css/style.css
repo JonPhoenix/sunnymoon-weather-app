@@ -51,7 +51,11 @@ section {
     height: auto;
     min-height: 150px;
     border-radius: 6px;
-    color: lightslategray;
+    color: slategray;
+}
+
+#input {
+    color: slategray;
 }
 
 h1 {
