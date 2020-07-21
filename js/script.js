@@ -219,6 +219,8 @@ $(document).ready(function() {
                     + weatherResponse.daily[0].humidity + " %" + "</div>" 
                     + "</div>"
                 );
+                // Function call
+                // displayCities ();
             })
         })
     }
@@ -230,10 +232,10 @@ $(document).ready(function() {
         // Taking the searched cities in the array and parsing them into a string
         let arrayStorage = JSON.parse(localStorage.getItem('inputCities')) || [];
         // Searched cities array length
-        // let arrayLength = arrayStorage.length;
+        let arrayLength = arrayStorage.length;
 
         // Loop through the array with searched cities
-        for (let i = 0; i < arrayStorage.length; i++) {
+        for (let i = 0; i < arrayLength; i++) {
             // Variable with city names from the array
             let cityName = arrayStorage[i];
             // Appending searched cities
@@ -245,5 +247,7 @@ $(document).ready(function() {
             )
         }
     }
+    // Function call
+    // displayCities ();
 
 });
