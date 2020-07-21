@@ -23,11 +23,14 @@ header {
     padding: 20px;
 }
 
+.align-right {
+    padding-right: 0;
+}
+
 .container-forecast {
     width: 100%;
     clear: both;
     float: right;
-    scroll-padding-right: 0;
     border-radius: 6px;
 }
 
@@ -65,6 +68,13 @@ h1 {
     color: white;
 }
 
+.uvi-btn {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    border: none;
+    padding: 20px;
+    background-color: #BBDEFB;
+}
 
 
 /* 1-day forecast */
