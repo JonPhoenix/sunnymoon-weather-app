@@ -221,9 +221,7 @@ $(document).ready(function() {
                 );
             })
         })
-
+        
         // LocalStorage block for input cities
-
     }
-
 });
