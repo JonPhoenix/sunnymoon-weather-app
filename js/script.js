@@ -62,7 +62,7 @@ $(document).ready(function() {
                 + "<img src='" + weatherIcon + "'>" + "</h2>"
                 + "<ul class='daily'>" + "Temperature: " + weatherResponse.main.temp + " °F" + "</ul>" 
                 + "<ul class='daily'>" + "Humidity: " + weatherResponse.main.humidity + " %" + "</ul>" 
-                + "<ul class='daily'>" + "Wind Speed: " + weatherResponse.wind.speed + " mph" + "</ul>" 
+                + "<ul class='daily'>" + "Wind Speed: " + weatherResponse.wind.speed +" mph" + "</ul>" 
                 + "</div>"
             );
             
