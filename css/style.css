@@ -1,16 +1,13 @@
 /* SunnyMoon Weather App project css style */
 
 /* Container */
-* {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 body {
     font-size: 16px;
     line-height: 1;
     align-content: center;
     margin: 40px;
     color: lightslategray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 header {
