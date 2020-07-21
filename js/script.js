@@ -8,14 +8,14 @@ $(document).ready(function() {
     // Choosing city / user's input
     $('#icon-button').on('click', function(event) {
         event.preventDefault();
-        // Variable - input and save a city
+        // Variable - input and save  city
         let cityInput = $('#input').val();
-        // Variable - array for input cities
+        // Variable - array - input cities
         let inputCities = [];
 
         // Getting input cities
         inputCities = JSON.parse(localStorage.getItem('inputCities')) || [];
-        // Pushing input cities to the empty array
+        // Pushing input cities to empty array
         inputCities.push(cityInput);
         // Saving input cities to localStorage
         localStorage.setItem('inputCities', JSON.stringify(inputCities));
@@ -47,12 +47,13 @@ $(document).ready(function() {
             url: currentDay,
             method: 'GET',
         }).then(function(weatherResponse) {
-            // Variable for weather icons
+            
+            // Current day variable / moment / date format
+            let currentDate = moment().format('M/DD/YYYY');
+
+            // Weather icon variable / from api weather url
             let weatherIcon = 'http://openweathermap.org/img/wn/' 
             + weatherResponse.weather[0].icon + '.png';
-
-            // Current day variable
-            let currentDate = moment().format('M/DD/YYYY');
 
             // Appending daily weather details to HTML / icons, temperature, humidity, wind speed
             $('#daily-weather').append(
@@ -84,7 +85,7 @@ $(document).ready(function() {
                 url: fiveDays,
                 method: 'GET',
             }).then(function(weatherResponse) {
-                // Appending UV Index inside a button to HTML daily weather details
+                // Appending UV Index inside button to HTML daily weather details
                 $('#daily-weather').append(
                     "<div class='col s12 m6'>" 
                     + "<button class='uvi-btn' id='uvIndex' class='daily'>" + "UV Index: " 
@@ -111,6 +112,27 @@ $(document).ready(function() {
                 
                 console.log(weatherResponse);
                 console.log(weatherResponse.current.uvi);
+
+                // 5-day forecast variables / moment / add / date format
+                let dayOne = moment().add(1, 'days').format('M/DD/YYYY');
+                let dayTwo = moment().add(2, 'days').format('M/DD/YYYY');
+                let dayThree = moment().add(3, 'days').format('M/DD/YYYY');
+                let dayFour = moment().add(4, 'days').format('M/DD/YYYY');
+                let dayFive = moment().add(5, 'days').format('M/DD/YYYY');
+
+                // 5-day weather icon variables / from api weather url
+                let weatherIcon1 = 'http://openweathermap.org/img/wn/' 
+                + weatherResponse.daily[0].weather[0].icon + '.png';
+                let weatherIcon2 = 'http://openweathermap.org/img/wn/' 
+                + weatherResponse.daily[1].weather[0].icon + '.png';
+                let weatherIcon3 = 'http://openweathermap.org/img/wn/' 
+                + weatherResponse.daily[2].weather[0].icon + '.png';
+                let weatherIcon4 = 'http://openweathermap.org/img/wn/' 
+                + weatherResponse.daily[3].weather[0].icon + '.png';
+                let weatherIcon5 = 'http://openweathermap.org/img/wn/' 
+                + weatherResponse.daily[4].weather[0].icon + '.png';
+
+                //
 
             })
 
