@@ -91,6 +91,23 @@ $(document).ready(function() {
                     + weatherResponse.current.uvi + "</button>"
                     + "</div>"
                 );
+
+                // Conditionals for UV Index button colors
+                if (weatherResponse.current.uvi <= 2.99) {
+                    $('#uvIndex').addClass('low');
+                }
+                else if (weatherResponse.current.uvi <= 5.99) {
+                    $('#uvIndex').addClass('moderate');
+                }
+                else if (weatherResponse.current.uvi <= 7.99) {
+                    $('#uvIndex').addClass('high');
+                }
+                else if (weatherResponse.current.uvi <= 10.99) {
+                    $('#uvIndex').addClass('very-high');
+                }
+                else if (weatherResponse.current.uvi > 11) {
+                    $('#uvIndex').addClass('extreme');
+                }
                 
             })
 

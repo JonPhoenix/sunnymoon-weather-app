@@ -89,7 +89,7 @@ ul {
     color: slategray;
 }
 
-/* UV Index button and colors */
+/* UV Index button and color scale */
 .uvi-btn {
     margin-left: 20px;
     margin-bottom: 30px;
@@ -100,27 +100,27 @@ ul {
     background-color: #BBDEFB;
 }
 
-.green {
+.low {
     background-color: palegreen;
     color: white;
 }
 
-.yellow {
+.moderate {
     background-color: orange;
     color: white;
 }
 
-.orange {
+.high {
     background-color: orangered;
     color: white;
 }
 
-.rouge {
+.very-high {
     background-color: red;
     color: white;
 }
 
-.indigo {
+.extreme {
     background-color: indigo;
     color: white;
 }
