@@ -177,6 +177,18 @@ $(document).ready(function() {
                     + "</div>"
                 );
 
+                // Appending day four weather card
+                $('#day-4').append(
+                    "<div class='card col-s12-m6'>" 
+                    + "<div class='card-body'>" 
+                    + "<div class='card-header'>" + dayFour + "</div" 
+                    + "<div class='card-info'>" + "<img src='" + weatherIcon4 + "'>" + "</div>" 
+                    + "<div class='card-info'>" + "Temperature: " 
+                    + weatherResponse.daily[0].temp.day + " °F" + "</div>" 
+                    + "<div class='card-info'>" + "Humidity: " 
+                    + weatherResponse.daily[0].humidity + " %" + "</div>" 
+                    + "</div>"
+                );
 
             })
 
