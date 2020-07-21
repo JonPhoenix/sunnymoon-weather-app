@@ -30,7 +30,6 @@ header {
 
 .container-forecast {
     width: 100%;
-    clear: both;
     float: right;
     border-radius: 6px;
     max-height: 150px;
