@@ -52,7 +52,7 @@ $(document).ready(function() {
             let currentDate = moment().format('M/DD/YYYY');
 
             // Weather icon variable / from api weather url
-            let weatherIcon = 'http://openweathermap.org/img/wn/' 
+            let weatherIcon = 'http://openweathermap.org/img/w/' 
             + weatherResponse.weather[0].icon + '.png';
 
             // Appending daily weather details to HTML / icons, temperature, humidity, wind speed
@@ -121,15 +121,15 @@ $(document).ready(function() {
                 let dayFive = moment().add(5, 'days').format('M/DD/YYYY');
 
                 // 5-day weather icon variables / from api weather url
-                let weatherIcon1 = 'http://openweathermap.org/img/wn/' 
+                let weatherIcon1 = 'http://openweathermap.org/img/w/' 
                 + weatherResponse.daily[0].weather[0].icon + '.png';
-                let weatherIcon2 = 'http://openweathermap.org/img/wn/' 
+                let weatherIcon2 = 'http://openweathermap.org/img/w/' 
                 + weatherResponse.daily[1].weather[0].icon + '.png';
-                let weatherIcon3 = 'http://openweathermap.org/img/wn/' 
+                let weatherIcon3 = 'http://openweathermap.org/img/w/' 
                 + weatherResponse.daily[2].weather[0].icon + '.png';
-                let weatherIcon4 = 'http://openweathermap.org/img/wn/' 
+                let weatherIcon4 = 'http://openweathermap.org/img/w/' 
                 + weatherResponse.daily[3].weather[0].icon + '.png';
-                let weatherIcon5 = 'http://openweathermap.org/img/wn/' 
+                let weatherIcon5 = 'http://openweathermap.org/img/w/' 
                 + weatherResponse.daily[4].weather[0].icon + '.png';
 
                 //
