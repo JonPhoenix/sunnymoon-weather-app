@@ -163,7 +163,21 @@ $(document).ready(function() {
                     + weatherResponse.daily[0].humidity + " %" + "</div>" 
                     + "</div>"
                 );
-                
+
+                // Appending day three weather card
+                $('#day-3').append(
+                    "<div class='card col-s12-m6'>" 
+                    + "<div class='card-body'>" 
+                    + "<div class='card-header'>" + dayThree + "</div" 
+                    + "<div class='card-info'>" + "<img src='" + weatherIcon3 + "'>" + "</div>" 
+                    + "<div class='card-info'>" + "Temperature: " 
+                    + weatherResponse.daily[0].temp.day + " °F" + "</div>" 
+                    + "<div class='card-info'>" + "Humidity: " 
+                    + weatherResponse.daily[0].humidity + " %" + "</div>" 
+                    + "</div>"
+                );
+
+
             })
 
         })
