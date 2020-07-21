@@ -48,6 +48,7 @@ section {
     min-height: 150px;
     border-radius: 6px;
     color: slategray;
+    padding-bottom: 20px;
 }
 
 #input {
@@ -138,4 +139,8 @@ ul {
     font-size: 24px;
     color: white;
     text-align: center;
+}
+
+.list-group-item {
+    color: slategray;
 }

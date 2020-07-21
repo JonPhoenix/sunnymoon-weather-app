@@ -220,7 +220,7 @@ $(document).ready(function() {
                     + "</div>"
                 );
                 // Calling in function
-                // displayCities ();
+                displayCities ();
             });
         });
     };
@@ -241,17 +241,17 @@ $(document).ready(function() {
             // Appending searched cities
             $('#searchedCities').append (
                 // Appending a city list
-                "<div class= 'city-list'>"
+                "<div class= 'list-group'>"
                 // Appending every searched city as a call-back button
-                + "<button class='list-item'>" + cityName + "</button>"
+                + "<button class='list-group-item'>" + cityName + "</button>"
             );
         };
     };
     // Calling in function
-    // displayCities ();
+    displayCities ();
 
     // On click event to displayCities / function / this
-    $('#searchedCities').on('click', '.list-item', function(event) {
+    $('#searchedCities').on('click', '.list-group-item', function(event) {
         // Prevents default action
         event.preventDefault();
         // Variable to call back cities
