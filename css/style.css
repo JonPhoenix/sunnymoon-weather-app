@@ -100,6 +100,31 @@ ul {
     background-color: #BBDEFB;
 }
 
+.green {
+    background-color: palegreen;
+    color: white;
+}
+
+.yellow {
+    background-color: orange;
+    color: white;
+}
+
+.orange {
+    background-color: orangered;
+    color: white;
+}
+
+.rouge {
+    background-color: red;
+    color: white;
+}
+
+.indigo {
+    background-color: indigo;
+    color: white;
+}
+
 /* 5-day forecast */
 
 /* Media Queries */
