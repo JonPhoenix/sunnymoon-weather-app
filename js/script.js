@@ -29,12 +29,13 @@ $(document).ready(function() {
 
         // Emptying previous data
         $('#daily-weather').empty();
-        $('#five-day').empty();
+        $('#six-days').empty();
         $('#day-1').empty();
         $('#day-2').empty();
         $('#day-3').empty();
         $('#day-4').empty();
         $('#day-5').empty();
+        $('#day-6').empty();
 
         // Api call weather / cityInput / units / my api key / currentDay variable
         let currentDay = 'https://api.openweathermap.org/data/2.5/weather?q='
@@ -119,6 +120,7 @@ $(document).ready(function() {
                 let dayThree = moment().add(3, 'days').format('M/DD/YYYY');
                 let dayFour = moment().add(4, 'days').format('M/DD/YYYY');
                 let dayFive = moment().add(5, 'days').format('M/DD/YYYY');
+                let daySix = moment().add(6, 'days').format('M/DD/YYYY');
 
                 // 5-day weather icon variables / from api weather url
                 let weatherIcon1 = 'http://openweathermap.org/img/w/' 
@@ -131,11 +133,13 @@ $(document).ready(function() {
                 + weatherResponse.daily[3].weather[0].icon + '.png';
                 let weatherIcon5 = 'http://openweathermap.org/img/w/' 
                 + weatherResponse.daily[4].weather[0].icon + '.png';
+                let weatherIcon6 = 'http://openweathermap.org/img/w/' 
+                + weatherResponse.daily[5].weather[0].icon + '.png';
 
                 // Appending 5-day weather to HTML / icon, temperature, and humidity
                 // 5-Days Forecast Header
-                $('#five-days').append(
-                    "<div class='col-md-12'>" + "<h2>" + "5-Day Forecast:" + "</h2>"
+                $('#six-days').append(
+                    "<div class='col-md-12'>" + "<h2>" + "6-Day Forecast:" + "</h2>"
                 );
 
                 // Appending day one weather card
@@ -196,6 +200,19 @@ $(document).ready(function() {
                     + "<div class='card-body'>" 
                     + "<div class='card-header'>" + dayFive + "</div" 
                     + "<div class='card-info'>" + "<img src='" + weatherIcon5 + "'>" + "</div>" 
+                    + "<div class='card-info'>" + "Temp: " 
+                    + weatherResponse.daily[0].temp.day + " °F" + "</div>" 
+                    + "<div class='card-info'>" + "Humidity: " 
+                    + weatherResponse.daily[0].humidity + " %" + "</div>" 
+                    + "</div>"
+                );
+
+                // Appending day six weather card
+                $('#day-6').append(
+                    "<div class='card col-s12-m6'>" 
+                    + "<div class='card-body'>" 
+                    + "<div class='card-header'>" + daySix + "</div" 
+                    + "<div class='card-info'>" + "<img src='" + weatherIcon6 + "'>" + "</div>" 
                     + "<div class='card-info'>" + "Temp: " 
                     + weatherResponse.daily[0].temp.day + " °F" + "</div>" 
                     + "<div class='card-info'>" + "Humidity: " 
