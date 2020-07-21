@@ -221,7 +221,16 @@ $(document).ready(function() {
                 );
             })
         })
-        
-        // LocalStorage block for input cities
     }
+    
+    // Function declaration / LocalStorage for input cities
+    function displayCities() {
+        // Emptying previous array
+        $('#searchedCities').empty();
+        // Taking the searched cities in the array and parsing them into a string
+        let arrayStorage = JSON.parse(localStorage.getItem('inputCities')) || [];
+        // Searched cities array length
+        let arrayLength = arrayStorage.length;
+    }
+
 });
