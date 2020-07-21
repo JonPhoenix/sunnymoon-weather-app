@@ -55,7 +55,7 @@ $(document).ready(function() {
             let weatherIcon = 'http://openweathermap.org/img/w/' 
             + weatherResponse.weather[0].icon + '.png';
 
-            // Appending daily weather details to HTML / icons, temperature, humidity, wind speed
+            // Appending daily weather details to HTML / icon, temperature, humidity, and wind speed
             $('#daily-weather').append(
                 "<div class='col s12 m6'>" 
                 + "<h2 class='daily'>" + weatherResponse.name + " ( " + currentDate + " )" + "&nbsp" 
@@ -132,7 +132,7 @@ $(document).ready(function() {
                 let weatherIcon5 = 'http://openweathermap.org/img/w/' 
                 + weatherResponse.daily[4].weather[0].icon + '.png';
 
-                //
+                // Appending 5-day weather to HTML / icon, temperature, and humidity
 
             })
 
