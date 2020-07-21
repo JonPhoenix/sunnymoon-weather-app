@@ -133,6 +133,10 @@ $(document).ready(function() {
                 + weatherResponse.daily[4].weather[0].icon + '.png';
 
                 // Appending 5-day weather to HTML / icon, temperature, and humidity
+                // 5-Days Forecast Header
+                $('#five-days').append(
+                    "<div class='col-md-12'>" + "<h2 id='five-days'>" + "5-Day Forecast:" + "</h2>"
+                );
 
             })
 
