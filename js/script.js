@@ -138,6 +138,19 @@ $(document).ready(function() {
                     "<div class='col-md-12'>" + "<h2 id='five-days'>" + "5-Day Forecast:" + "</h2>"
                 );
 
+                // Appending day one weather card
+                $('#day-1').append(
+                    "<div class='card col-s12-m6'>" 
+                    + "<div class='card-body'>" 
+                    + "<div class='card-header'>" + dayOne + "</div" 
+                    + "<div class='card-info'>" + "<img src='" + weatherIcon1 + "'>" + "</div>" 
+                    + "<div class='card-info'>" + "Temperature: " 
+                    + weatherResponse.daily[0].temp.day + " °F" + "</div>" 
+                    + "<div class='card-info'>" + "Humidity: " 
+                    + weatherResponse.daily[0].humidity + " %" + "</div>" 
+                    + "</div>"
+                );
+
             })
 
         })
