@@ -109,6 +109,9 @@ $(document).ready(function() {
                     $('#uvIndex').addClass('extreme');
                 }
                 
+                console.log(weatherResponse);
+                console.log(weatherResponse.current.uvi);
+
             })
 
         })
