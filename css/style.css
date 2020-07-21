@@ -2,7 +2,6 @@
 
 /* Container */
 * {
-    box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -129,7 +128,7 @@ ul {
 .card-body {
     font-size: 16px;
     font-weight: normal;
-    line-height: 30px;
+    line-height: 28px;
     text-align: center;
     background-color: #0D47A1;
     color: #BBDEFB;
@@ -141,6 +140,5 @@ ul {
 .card-header {
     font-size: 24px;
     color: white;
+    text-align: center;
 }
-
-/* Media Queries */
