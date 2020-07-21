@@ -189,9 +189,20 @@ $(document).ready(function() {
                     + weatherResponse.daily[0].humidity + " %" + "</div>" 
                     + "</div>"
                 );
-
+                
+                // Appending day five weather card
+                $('#day-5').append(
+                    "<div class='card col-s12-m6'>" 
+                    + "<div class='card-body'>" 
+                    + "<div class='card-header'>" + dayFive + "</div" 
+                    + "<div class='card-info'>" + "<img src='" + weatherIcon5 + "'>" + "</div>" 
+                    + "<div class='card-info'>" + "Temperature: " 
+                    + weatherResponse.daily[0].temp.day + " °F" + "</div>" 
+                    + "<div class='card-info'>" + "Humidity: " 
+                    + weatherResponse.daily[0].humidity + " %" + "</div>" 
+                    + "</div>"
+                );
             })
-
         })
 
         // LocalStorage block for input cities
