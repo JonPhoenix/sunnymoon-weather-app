@@ -62,7 +62,7 @@ $(document).ready(function() {
                 + "<ul class='daily'>" + "Wind Speed: " + weatherResponse.wind.speed +" mph" + "</ul>" 
                 + "</div>"
             );
-  
+
             // Variable - coordinate latitude
             let coordinateLat = weatherResponse.coord.lat;
             // Variable - coordinate longitude
@@ -72,7 +72,7 @@ $(document).ready(function() {
             let fiveDays = 'https://api.openweathermap.org/data/2.5/onecall?' 
             + 'lat=' + coordinateLat + '&lon=' + coordinateLon + '&units=imperial' 
             + '&appid=f1a16cad1c18080e4ffd997bda8b2d9d';
-            
+
             // Ajax url call - then - function / 5-day forecast / UV Index button
             $.ajax({
                 url: fiveDays,
