@@ -1,5 +1,5 @@
 # SunnyMoon Weather App
-The **"SunnyMoon"** is a weather dashboard application with search functionality to find the current weather conditions and the future weather outlook for cities around the world. The user will be able to plan a personal trip or a business trip based on the displayed data and keep the searched cities for future reference.
+The **"SunnyMoon"** is a weather dashboard application with a powerful search functionality to find the current weather conditions, and the future weather outlook for any city in the world. The user will be able to plan a personal trip or a business trip based on the displayed data and keep the searched cities for future reference.
 
 When the user searches for a city, the app immediately displays the date with the current temperature represented with an icon image, humidity, wind speed and the ultra violet index. A weather forecast for the future six days will be displayed below the current day's information.
 
