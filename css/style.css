@@ -1,4 +1,9 @@
 /* SunnyMoon Weather App project css style */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
 /* Container */
 body {
@@ -18,6 +23,11 @@ header {
     border-radius: 6px;
     text-align: center;
     padding: 20px;
+}
+
+.wrapper {
+    max-width: 940px;
+    margin: 0 auto;
 }
 
 .align-right {
@@ -143,4 +153,11 @@ ul {
 
 .list-group-item {
     color: slategray;
+}
+
+/* maintains side margins for small view ports */
+@media only screen and (max-width: 980px) {
+    .wrapper { 
+        margin: 0 20px;
+    }
 }
