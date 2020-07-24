@@ -1,15 +1,13 @@
-# sunnymoon-weather-app
-Repository for the weather dashboard project
+# SunnyMoon Weather App
+The **"SunnyMoon"** is a weather dashboard application with search functionality to find the current weather conditions and the future weather outlook for cities around the world. The user will be able to plan a personal trip or a business trip based on the displayed data.
 
-Brief:
+Technologies: HTML5, CSS3, powered by JavaScript, jQuery and the OpenWeather API
 
-# Unit 06 Server-Side APIs Homework: Weather Dashboard
+Deployment url: https://jonphoenix.github.io/sunnymoon-weather-app/
 
-Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. In this homework assignment, your challenge is to build a weather dashboard using the OpenWeather API.
 
-## Instructions
+## Application Features
 
-Build a weather dashboard application with search functionality to find current weather conditions and the future weather outlook for multiple cities. Following the [common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates), we can frame this challenge as follows:
 
 ```
 As a traveler
