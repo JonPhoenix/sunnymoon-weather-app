@@ -155,7 +155,7 @@ ul {
     color: slategray;
 }
 
-/* maintains side margins for small view ports */
+/* Maintains side margins - small view ports */
 @media only screen and (max-width: 980px) {
     .wrapper { 
         margin: 0 20px;
