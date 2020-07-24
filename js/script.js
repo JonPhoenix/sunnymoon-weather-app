@@ -1,8 +1,6 @@
 // SunnyMoon Weather App project script
 // Function: jQuery / on-click event user - city
 $(document).ready(function() {
-    
-    console.log('ready');
 
     // Choosing city / user's input
     $('#icon-button').on('click', function(event) {
@@ -41,8 +39,6 @@ $(document).ready(function() {
         let currentDay = 'https://api.openweathermap.org/data/2.5/weather?q='
         + cityInput + '&units=imperial' + '&appid=f1a16cad1c18080e4ffd997bda8b2d9d';
         
-        console.log('current day: ', currentDay);
-
         // Ajax url call - then - function / 1-day forecast
         $.ajax({
             url: currentDay,
@@ -66,9 +62,7 @@ $(document).ready(function() {
                 + "<ul class='daily'>" + "Wind Speed: " + weatherResponse.wind.speed +" mph" + "</ul>" 
                 + "</div>"
             );
-            
-            console.log(weatherResponse);
-
+  
             // Variable - coordinate latitude
             let coordinateLat = weatherResponse.coord.lat;
             // Variable - coordinate longitude
@@ -79,8 +73,6 @@ $(document).ready(function() {
             + 'lat=' + coordinateLat + '&lon=' + coordinateLon + '&units=imperial' 
             + '&appid=f1a16cad1c18080e4ffd997bda8b2d9d';
             
-            console.log('five days: ', fiveDays);
-
             // Ajax url call - then - function / 5-day forecast / UV Index button
             $.ajax({
                 url: fiveDays,
@@ -110,9 +102,6 @@ $(document).ready(function() {
                 else if (weatherResponse.current.uvi > 11) {
                     $('#uvIndex').addClass('extreme');
                 };
-                
-                console.log(weatherResponse);
-                console.log(weatherResponse.current.uvi);
 
                 // 5-day forecast variables / moment / add / date format
                 let dayOne = moment().add(1, 'days').format('M/DD/YYYY');
