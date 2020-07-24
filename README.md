@@ -46,5 +46,3 @@ Deployment url: https://jonphoenix.github.io/sunnymoon-weather-app/
 ![SunnyMoon Weather App](https://user-images.githubusercontent.com/65391199/88371158-5aa00f80-cd48-11ea-9ddb-aabd7c896b2c.png)
 ![SunnyMoon Weather App](https://user-images.githubusercontent.com/65391199/88371155-596ee280-cd48-11ea-9848-465e5dd0f484.png)
 ![SunnyMoon Weather App](https://user-images.githubusercontent.com/65391199/88371151-58d64c00-cd48-11ea-8546-1553e8654dfc.png)
-![SunnyMoon Weather App](https://user-images.githubusercontent.com/65391199/88371148-57a51f00-cd48-11ea-807c-7095f4ec0a6d.png)
-
