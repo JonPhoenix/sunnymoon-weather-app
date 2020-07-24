@@ -29,7 +29,13 @@ Deployment url: https://jonphoenix.github.io/sunnymoon-weather-app/
 
 
 ```
-* Text
+* openweathermap.org
+* getbootstrap.com
+* developer.mozilla.org
+
+* momentjs.com
+* w3.org
+* wikihow.com
 
 ```
 
