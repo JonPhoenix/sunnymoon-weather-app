@@ -13,7 +13,7 @@ Deployment url: https://jonphoenix.github.io/sunnymoon-weather-app/
 
 ```
 * Functional deployment on desktop and mobile view ports
-* Sleek, functional and uncomplicated interfase
+* Sleek, functional and uncomplicated interface
 * A search engine on side bar to locate any city in the world
 * The application displays: City, date, temperature, humidity, and wind speed
 * Icon images representing the weather conditions for current day and 6-day forecast
